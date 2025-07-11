@@ -1,9 +1,8 @@
 # This is the top-level key that was missing
 services:
   odoo:
-    # The 'image' key will be ignored by Coolify when building from a Dockerfile
-    # but it's good practice to keep it for local testing.
-    image: 'odoo:18'
+    build:
+      context: .
     environment:
       - SERVICE_FQDN_ODOO_8069
       - HOST=postgresql
