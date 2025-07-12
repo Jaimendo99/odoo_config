@@ -3,6 +3,8 @@ services:
   odoo:
     build:
       context: .
+    # Add this command line
+    command: odoo --proxy-mode
     environment:
       - SERVICE_FQDN_ODOO_8069
       - HOST=postgresql
